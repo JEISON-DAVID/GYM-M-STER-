@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+<nav class="profile-card">
+    <div id="user-info">
+        <img src="../imágenes/icono-perfil.png" alt="Foto de perfil">
+        <span>USUARIO</span>
+    </div>
+    <a href="#">Cerrar Sesión</a>
+</nav>
+
+
+    <!-- Formulario para actualizar el nombre de usuario -->
+    <form id="profileForm">
+        <input type="text" id="newUsername" placeholder="Nuevo nombre de usuario">
+        <button type="button" id="updateUsername">Actualizar nombre de usuario</button>
+    </form>
+
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const updateUsernameBtn = document.getElementById("updateUsername");
+    const newUsernameInput = document.getElementById("newUsername");
+    const userInfoSpan = document.querySelector("#user-info span");
+
+    // Intentar cargar el nombre de usuario desde localStorage si ya está guardado
+    const savedUsername = localStorage.getItem("username");
+
+    if (savedUsername) {
+        userInfoSpan.textContent = savedUsername;
+    }
+
+    updateUsernameBtn.addEventListener("click", function () {
+        const newUsername = newUsernameInput.value;
+        userInfoSpan.textContent = newUsername; // Actualizar el nombre de usuario en el span
+        newUsernameInput.value = ""; // Limpiar el campo de entrada
+
+        // Guardar el nombre de usuario en localStorage
+        localStorage.setItem("username", newUsername);
+
+        // Redirigir a otro archivo HTML (reemplaza "otroarchivo.html" con la ruta correcta)
+        window.location.href = "../html/inicio.html";
+    });
+});
+
+    </script> <!-- Enlazar a tu archivo JavaScript -->
+</body>
+</html>
