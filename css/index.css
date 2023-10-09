@@ -75,7 +75,7 @@ body{
 }
 
 #menu{
-    display: none;
+  display: none;
     
 }
 
@@ -481,4 +481,117 @@ blog-txt h3{
     color: royalblue;
 }
 
-/* Agrega estilos adicionales según tus preferencias */
+@media (max-width: 720px) {
+  
+  .menu{
+    padding: 20px;
+  }
+
+  .menu label{
+    display: initial;
+  }
+  .menu .navbar{
+    position: absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+    background:#5FA5FF;
+    display: none;
+  }
+  .menu .navbar ul li{
+    width: 100%;
+  }
+  .menu .nvbar ul li a{
+    color: white;
+    
+  }
+  .menu .navbar ul li a:hover{
+    color: black;
+  }
+  #menu:checked ~ .navbar{
+    display: initial;
+  }
+  .header{
+    min-width: 0vh;
+    padding: 100px 30px;
+  }
+  
+  .header-txt{
+    text-align: center;
+    padding: 0px;
+  }
+  .header-txt h1{
+    font-size: 35px;
+  }
+  .about{
+    padding: 30px;
+    
+  }
+  .about-content{
+    flex-direction: column;
+    
+  }
+  
+  .testimonial{
+    padding: 30px;
+  }
+  .testimonial-content{
+    flex-direction: column;
+    
+  }
+  .testimonial-1{
+    margin-bottom: 30px;
+  }
+  
+  .plans{
+    padding: 30px;
+  }
+  .plans-content{
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .plan-1{
+    margin-bottom: 30px;
+  }
+  
+  .information{
+    padding:30px;
+  }
+  .information-content{
+    flex-direction: column;
+  }
+  .information-txt{
+    order:-2;
+    padding: 0px;
+    margin: 30 0px;
+  }
+  
+  .blog{
+ padding:30px;
+  }
+  .blog-content{
+    flex-direction: column;
+  }
+  .blog-1{
+    margin-bottom: 30px;
+  }
+  
+  .contacto{
+    padding: 100px 30px;
+  }
+  
+  .contact-content{
+  }
+  
+  
+  .footer{
+    padding: 0px;
+    
+  }
+  
+  .footer-content{
+   flex-direction: column;
+    text-align: center;
+    background: black;
+  }
+}
